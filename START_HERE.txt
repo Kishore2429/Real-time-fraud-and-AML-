@@ -1,0 +1,30 @@
+SYNESIS 26 — IMPROVED CONNECTED FRONTEND + BACKEND
+
+This version preserves the existing React/Vite frontend and FastAPI/SQLite backend and adds improved explainable risk scoring, rolling-window AML flags, and investigation-case status history.
+
+WINDOWS SETUP
+
+1. Extract this ZIP and keep the folder structure intact.
+2. Open a Command Prompt in the backend folder and run:
+   setup.bat
+   Keep this window open. The API should run at http://127.0.0.1:8000.
+3. Open a SECOND Command Prompt in the frontend folder and run:
+   npm install
+   npm run dev
+4. Open the localhost URL printed by Vite, usually http://localhost:5173.
+
+API checks:
+- http://127.0.0.1:8000/api/health
+- http://127.0.0.1:8000/docs
+- http://127.0.0.1:8000/api/dashboard
+
+Run backend tests after setup has installed dependencies:
+   .venv\Scripts\python.exe -m unittest discover -s tests -v
+Run a frontend production build from the frontend folder:
+   npm run build
+
+IMPORTANT
+- Do not delete or replace your original working project; extract this improved ZIP into a separate folder.
+- The risk rules are explainable heuristics, not trained ML. AML patterns are possible indicators, not proof of crime.
+- Demo data is synthetic. Never enter real banking or personal information.
+- No blockchain integration is included because the official hackathon problem statement was not supplied to confirm it is required.
